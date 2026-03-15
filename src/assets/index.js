@@ -2,6 +2,8 @@ import bwmap from './backgrounds/bw-map.jpeg';
 import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 
+import onndwela from './onndwela.jpeg';
+
 import logo from './logo/logo-black.png';
 
 import backend from './icons/backend.png';
@@ -45,6 +47,7 @@ import deloitte from "./certificates/deloitte.png";
 
 
 export {
+  onndwela,
   foundation,
   practitioner,
   azure,

@@ -16,7 +16,7 @@ import {
   practitioner,
   foundation,
   azure,
-  deloitte
+  deloitte,
 } from "../assets";
 
 export const navLinks = [
@@ -36,19 +36,19 @@ export const navLinks = [
 
 const services = [
   {
+    title: "CI/CD Pipelines",
+    icon: backend,
+  },
+  {
     title: "Automation",
     icon: frontend,
   },
   {
-    title: "CI/CD",
-    icon: backend,
-  },
-  {
-    title: "Infrastructure as Code (IaC)",
+    title: "Cloud & Monitoring",
     icon: ux,
   },
   {
-    title: "Monitoring and Logging",
+    title: "IT Support & Security",
     icon: prototyping,
   },
 ];
@@ -66,121 +66,104 @@ const technologies = [
     name: 'JavaScript',
     icon: javascript,
   },
-  // {
-  //   name: 'TypeScript',
-  //   icon: typescript,
-  // },
-  // {
-  //   name: 'React JS',
-  //   icon: reactjs,
-  // },
-  // {
-  //   name: 'Redux Toolkit',
-  //   icon: redux,
-  // },
-  // {
-  //   name: 'Tailwind CSS',
-  //   icon: tailwind,
-  // },
-  // {
-  //   name: 'Node JS',
-  //   icon: nodejs,
-  // },
-  // {
-  //   name: 'Rails',
-  //   icon: rubyrails,
-  // },
-  // {
-  //   name: 'graphql',
-  //   icon: graphql,
-  // },
   {
-    name: 'postgresql',
+    name: 'PostgreSQL',
     icon: postgresql,
   },
   {
-    name: 'git',
+    name: 'Git',
     icon: git,
   },
   {
-    name: 'docker',
+    name: 'Docker',
     icon: docker,
   },
 ];
 
 const experiences = [
   {
-    title: 'DevOps Engineer',
-    company_name: 'Ellocent Labs',
+    title: 'DevOps Engineer Intern',
+    company_name: 'Empire Partner Foundation',
     icon: coverhunt,
     iconBg: '#333333',
-    date: 'May 2022 - Present',
+    date: 'March 2025 – Present',
+    points: [
+      'Designed and maintained CI/CD pipelines using GitHub Actions and Docker.',
+      'Monitored infrastructure and application health using AWS CloudWatch.',
+      'Collaborated with dev and ops teams to troubleshoot deployment issues.',
+      'Automated routine infrastructure tasks, reducing manual errors.',
+      'Conducted vulnerability assessments and implemented security improvements.',
+    ],
   },
   {
-    title: 'Softwaree Engineer associate',
-    company_name: 'Xenonstack',
+    title: 'Volunteer IT Assistant',
+    company_name: 'Faizel Electronics Solutions',
     icon: microverse,
     iconBg: '#333333',
-    date: 'Jan 2022 - Apr 2022',
+    date: 'January 2024 – December 2024',
+    points: [
+      'Diagnosed and resolved hardware and software issues on laptops and desktops.',
+      'Performed hardware repairs, upgrades, and component replacements.',
+      'Installed and configured operating systems and essential software.',
+      'Supported data backup, antivirus setup, and system optimisation.',
+    ],
   },
   {
-    title: 'Clound Engineer Intern',
-    company_name: 'Simba Developers',
+    title: 'Diploma – Information Technology Management',
+    company_name: 'IIE Rosebank College',
     icon: kelhel,
     iconBg: '#333333',
-    date: 'June 2021 - Dec 2021',
+    date: '2021 – 2023',
+    points: [
+      'Information Security, Database Management, Web Development.',
+      'Enterprise Resource Planning, System Analysis & Design, Help Desk.',
+    ],
   },
   {
-    title: 'B.tech CSE',
-    company_name: 'GNA University, Phagwara',
+    title: 'Matric – Physical Sciences & Mathematics',
+    company_name: 'Tshivhase Secondary School',
     icon: dcc,
     iconBg: '#333333',
-    date: 'July 2018 - June 2022',
+    date: '2015 – 2019',
   },
 ];
 
 const projects = [
   {
     id: "project-1",
-    name: "AWS Academy Foundation Graduate ",
-    description: "View my verified achievement from Amazon Web Services (AWS).",
+    name: "AWS Academy Cloud Foundations",
+    description:
+      "Completed AWS Academy Cloud Foundations, covering core AWS services, cloud concepts, security, and architecture.",
     image: foundation,
     repo: "#",
-    demo: "https://manp1209.s3.ap-south-1.amazonaws.com/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20230804-28-luyiiy.pdf",
+    demo: "https://www.linkedin.com/in/tshivhandekano-onndwela",
   },
   {
     id: "project-2",
     name: "AWS Certified Cloud Practitioner",
     description:
-      "AWS Academy Graduate issued by  Amazon Web Services Training and Certification.",
+      "Earned the AWS Certified Cloud Practitioner credential, validating foundational cloud knowledge and AWS services.",
     image: practitioner,
     repo: "#",
-    demo: "https://manp1209.s3.ap-south-1.amazonaws.com/AWS+Certified+Cloud+Practitioner+certificate.pdf",
+    demo: "https://www.linkedin.com/in/tshivhandekano-onndwela",
   },
   {
     id: "project-3",
-    name: "Azure",
-    description: "Create a virtual machine and deploy a Web Server",
+    name: "Azure Virtual Machine Deployment",
+    description:
+      "Hands-on experience creating virtual machines and deploying a web server on Microsoft Azure.",
     image: azure,
     repo: "#",
-    demo: "https://manp1209.s3.ap-south-1.amazonaws.com/Azure.pdf",
+    demo: "https://www.linkedin.com/in/tshivhandekano-onndwela",
   },
   {
     id: "project-4",
-    name: "Deloitte",
+    name: "Deloitte Technology Consulting",
     description:
-      "Technology Consulting Virtual Internship",
+      "Completed Deloitte's Technology Consulting Virtual Internship, gaining exposure to real-world consulting and tech strategy.",
     image: deloitte,
     repo: "#",
-    demo: "https://manp1209.s3.ap-south-1.amazonaws.com/FqFtWwQzNxJ8Qsh5H_Deloitte_P9vz2x4Mcp37hehcd_completion_certificate.pdf",
-  },
-  {
-    id: "project-5",
-    name: "AWS Academy Foundation Graduate ",
-    description: "View my verified achievement from Amazon Web Services (AWS).",
-    image: foundation,
-    repo: "#",
-    demo: "https://manp1209.s3.ap-south-1.amazonaws.com/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20230804-28-luyiiy.pdf",
+    demo: "https://www.linkedin.com/in/tshivhandekano-onndwela",
   },
 ];
 

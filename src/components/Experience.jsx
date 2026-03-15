@@ -47,6 +47,17 @@ const ExperienceCard = ({ experience }) => (
         style={{ margin: 0 }}>
         {experience.company_name}
       </p>
+      {experience.points && (
+        <ul className="mt-4 list-disc ml-5 space-y-2">
+          {experience.points.map((point, index) => (
+            <li
+              key={index}
+              className="text-jetLight text-[14px] tracking-wider">
+              {point}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   </VerticalTimelineElement>
 );
@@ -59,7 +70,7 @@ const Experience = () => {
           What I've done so far
         </p>
         <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
-          Work Experience and Qualification
+          Work Experience and Qualifications
         </h2>
       </motion.div>
 
@@ -103,7 +114,7 @@ const Experience = () => {
               ease-in-out uppercase"
               onClick={() =>
                 window.open(
-                  "https://manp1209.s3.ap-south-1.amazonaws.com/dummy.pdf", //paste the link to your resume here
+                  "https://www.linkedin.com/in/tshivhandekano-onndwela",
                   "_blank"
                 )
               }

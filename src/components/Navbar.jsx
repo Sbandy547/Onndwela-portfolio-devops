@@ -28,11 +28,9 @@ const Navbar = () => {
             className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
           />
 
-          {/* if you have text you want besides your logo it comes here.
-          Otherwise delete this if you don't need it. */}
-          {/* <span className="text-4xl text-primary  font-semibold uppercase">
-            Mann
-          </span> */}
+          <span className="text-[22px] text-eerieBlack font-semibold font-mova uppercase tracking-[2px]">
+            Onndwela
+          </span>
           {/* <img
             src={logotext}
             alt="logo"

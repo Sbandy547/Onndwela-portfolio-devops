@@ -1,15 +1,12 @@
 import { motion } from 'framer-motion';
-// import { Link } from 'react-router-dom';
 import { styles } from '../styles';
-// import { navLinks } from '../constants';
-import { whiteabstract, worldmap } from '../assets';
+import { whiteabstract, worldmap, onndwela } from '../assets';
 
 const Hero = () => {
   return (
     <>
       <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
         <img
-          // src={bwmap}
           src={whiteabstract}
           alt="world map"
           className="w-full h-full sm:block hidden object-cover"
@@ -37,32 +34,39 @@ const Hero = () => {
             <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden" />
           </div>
 
-          <div>
+          <div className="flex-1">
             <h1
               className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
             >
-              Hi, I'm   
+              Hi, I'm{' '}
               <span
                 className="sm:text-battleGray sm:text-[5rem] 
                 text-eerieBlack text-[3rem] font-mova
                 font-extrabold uppercase"
-              >                
-                Manpreet
+              >
+                Onndwela
               </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-gray-500`}>
-              As a DevOps enthusiast, <br className="sm:block hidden" />I strive
-              to streamline software development and operations by leveraging
-              automation, continuous integration, and deployment to deliver
-              efficient and reliable solutions.
+            <p className={`${styles.heroSubText} mt-2 text-gray-500 max-w-xl`}>
+              DevOps Intern passionate about automation,{' '}
+              <br className="sm:block hidden" />
+              CI/CD pipelines, and streamlining system operations{' '}
+              <br className="sm:block hidden" />
+              for reliable, efficient software delivery.
             </p>
           </div>
-          <div
-            className="w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4"
-          ></div>
 
-          <div></div>
+          <div
+            className="hidden lg:flex items-end justify-end
+            sm:-mr-[2rem] mt-[-60px]"
+          >
+            <img
+              src={onndwela}
+              alt="Onndwela"
+              className="w-[220px] h-[280px] object-cover object-top
+              rounded-2xl shadow-2xl border-4 border-white/60"
+            />
+          </div>
         </div>
 
         <div
@@ -82,23 +86,12 @@ const Hero = () => {
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
-                  repeatType: "loop",
+                  repeatType: 'loop',
                 }}
                 className="w-3 h-3 rounded-full bg-taupe mb-1"
               />
             </div>
           </a>
-        </div>
-
-        {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
-        <div>
-          {/* <img
-            className="absolute bottom-0 ml-[50vw] 
-            lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
-            sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-            src={man}
-            alt="shaquille"
-          /> */}
         </div>
       </section>
     </>
