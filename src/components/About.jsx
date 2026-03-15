@@ -39,13 +39,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
       >
-        Motivated IT graduate and DevOps intern with hands-on experience in
-        automation, system monitoring, CI/CD pipelines, and web development.
-        Skilled in troubleshooting and managing Windows and Linux systems, with
-        a strong focus on improving system efficiency and user experience. I
-        thrive on collaborative problem-solving and continuous learning — always
-        looking for ways to bridge development and operations for more reliable
-        and scalable solutions.
+        Hi, I&apos;m <strong>Tshivhandekano Onndwela</strong> — a motivated IT
+        graduate and DevOps intern with hands-on experience in automation,
+        system monitoring, CI/CD pipelines, and web development. Skilled in
+        troubleshooting and managing Windows and Linux systems, with a strong
+        focus on improving system efficiency and user experience. I thrive on
+        collaborative problem-solving and continuous learning — always looking
+        for ways to bridge development and operations for more reliable and
+        scalable solutions.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

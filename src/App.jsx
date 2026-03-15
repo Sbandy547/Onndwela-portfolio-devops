@@ -7,7 +7,6 @@ import {
   Navbar,
   Tech,
 } from './components';
-import Certificates from './components/Certificates';
 
 const App = () => {
   return (
@@ -26,9 +25,6 @@ const App = () => {
           <Tech />
         </div>
 
-        {/* <Projects /> */}
-        <Certificates/>
-
         <div
           className="bg-experience bg-cover bg-center bg-no-repeat 
             rounded-tl-[150px] rounded-br-[150px]">
@@ -38,6 +34,7 @@ const App = () => {
             <Experience />
           </div>
         </div>
+
         <div className="relative z-0">
           <Contact />
         </div>

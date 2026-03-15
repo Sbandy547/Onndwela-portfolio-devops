@@ -28,8 +28,8 @@ const Navbar = () => {
             className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
           />
 
-          <span className="text-[22px] text-eerieBlack font-semibold font-mova uppercase tracking-[2px]">
-            Onndwela
+          <span className="text-[16px] text-eerieBlack font-semibold font-mova uppercase tracking-[1px] leading-tight">
+            Tshivhandekano<br />Onndwela
           </span>
           {/* <img
             src={logotext}
