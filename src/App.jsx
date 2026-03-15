@@ -7,6 +7,7 @@ import {
   Navbar,
   Tech,
 } from './components';
+import Projects from './components/Projects';
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
         <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
           <Tech />
         </div>
+
+        <Projects />
 
         <div
           className="bg-experience bg-cover bg-center bg-no-repeat 

@@ -1,157 +1,90 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
-import {  pineapple, pineappleHover } from '../assets';
+import { SectionWrapper } from '../hoc';
+import { fadeIn, textVariant } from '../utils/motion';
 import { projects } from '../constants';
-import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 
-const ProjectCard = ({
-  id,
-  name,
-  description,
-  image,
-  repo,
-  demo,
-  index,
-  active,
-  handleClick,
-}) => {
-  return (
-    <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className={`relative ${
-        active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-      } flex items-center justify-center min-w-[170px] 
-      h-[420px] cursor-pointer card-shadow`}
-      onClick={() => handleClick(id)}>
-      <div
-        className="absolute top-0 left-0 z-10 bg-jetLight 
-      h-full w-full opacity-[0.5] rounded-[24px]"></div>
-
-      <img
-        src={image}
-        alt={name}
-        className="absolute w-full h-full object-cover rounded-[24px]"
-      />
-
-      {active !== id ? (
-        <div className="flex items-center justify-start pr-[4.5rem]">
-          <h3
-            className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
-        whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20">
-            {name}
-          </h3>
-        </div>
-      ) : (
-        <>
-          <div
-            className="absolute bottom-0 p-8 justify-start w-full 
-            flex-col bg-[rgba(122,122,122,0.5)] rounded-b-[24px] z-20">
-            {/* <div className="absolute inset-0 flex justify-end m-3">
-              <div
-                onClick={() => window.open(repo, '_blank')}
-                className="bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full 
-                  flex justify-center items-center cursor-pointer
-                  sm:opacity-[0.9] opacity-[0.8]">
-                <img
-                  src={github}
-                  alt="source code"
-                  className="w-4/5 h-4/5 object-contain"
-                />
-              </div>
-            </div> */}
-
-            <h2
-              className="font-bold sm:text-[32px] text-[24px] 
-              text-timberWolf uppercase font-beckman sm:mt-0 -mt-[1rem]">
+const ProjectCard = ({ index, name, description, tags, url }) => (
+  <motion.div
+    variants={fadeIn('up', 'spring', index * 0.3, 0.75)}
+    className="w-full max-w-2xl mx-auto"
+  >
+    <div
+      className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] 
+      rounded-2xl p-8 shadow-2xl border border-white/10
+      hover:border-french/40 transition duration-300 group"
+    >
+      {/* Top row */}
+      <div className="flex items-start justify-between gap-4 mb-5">
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            {/* Globe icon */}
+            <div className="w-10 h-10 rounded-full bg-french/20 flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-french" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+              </svg>
+            </div>
+            <h3 className="text-timberWolf text-[26px] font-bold font-beckman uppercase tracking-[1px]">
               {name}
-            </h2>
-            <p
-              className="text-silver sm:text-[14px] text-[12px] 
-              max-w-3xl sm:leading-[24px] leading-[18px]
-              font-poppins tracking-[1px]">
-              {description}
-            </p>
-            <button
-              className="live-demo flex justify-between 
-              sm:text-[16px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-2 pr-3 
-              whitespace-nowrap gap-1 sm:w-[138px] sm:h-[50px] 
-              w-[125px] h-[46px] rounded-[10px] glassmorphism 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
-              onClick={() => window.open(demo, '_blank')}
-              onMouseOver={() => {
-                document
-                  .querySelector('.btn-icon')
-                  .setAttribute('src', pineappleHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector('.btn-icon')
-                  .setAttribute('src', pineapple);
-              }}>
-              <img
-                src={pineapple}
-                alt="pineapple"
-                className="btn-icon sm:w-[34px] sm:h-[34px] 
-                  w-[30px] h-[30px] object-contain"
-              />
-              LIVE DEMO
-            </button>
+            </h3>
           </div>
-        </>
-      )}
-    </motion.div>
-  );
-};
-
-const Projects = () => {
-  const [active, setActive] = useState('project-2');
-
-  return (
-    <div className="-mt-[6rem]">
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>Case Studies</p>
-        <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
-      </motion.div>
-
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-          These projects demonstrate my with practical examples of
-          some of my work, including brief descriptions and links to code
-          repositories and live demos. They showcase my ability to tackle
-          intricate challenges, adapt to various technologies, and efficiently
-          oversee projects.
-        </motion.p>
+          <p className="text-silver text-[15px] font-poppins leading-[26px] max-w-lg">
+            {description}
+          </p>
+        </div>
       </div>
 
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col`}>
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              index={index}
-              {...project}
-              active={active}
-              handleClick={setActive}
-            />
-          ))}
-        </div>
-      </motion.div>
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        {tags.map((tag) => (
+          <span
+            key={tag}
+            className="text-[11px] font-poppins font-medium uppercase tracking-[1px]
+            px-3 py-1 rounded-full bg-french/20 text-french border border-french/30"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      {/* Visit button */}
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-3 px-6 py-3 rounded-xl
+        bg-french text-eerieBlack font-bold font-beckman text-[14px] uppercase tracking-[1px]
+        hover:bg-timberWolf transition duration-200 group-hover:scale-[1.02] transform"
+      >
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+        </svg>
+        Visit jobsready.co.za
+      </a>
     </div>
-  );
-};
+  </motion.div>
+);
+
+const Projects = () => (
+  <div className="-mt-[6rem]">
+    <motion.div variants={textVariant()}>
+      <p className={styles.sectionSubText}>What I've built</p>
+      <h2 className={styles.sectionHeadTextLight}>Projects.</h2>
+    </motion.div>
+
+    <motion.p
+      variants={fadeIn('', '', 0.1, 1)}
+      className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px] mb-12"
+    >
+      Here are real-world projects I have designed, developed, and actively manage.
+    </motion.p>
+
+    <div className="flex flex-col gap-8">
+      {projects.map((project, index) => (
+        <ProjectCard key={project.id} index={index} {...project} />
+      ))}
+    </div>
+  </div>
+);
 
 export default SectionWrapper(Projects, 'projects');

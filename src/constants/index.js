@@ -13,16 +13,16 @@ import {
   dcc,
   kelhel,
   microverse,
-  practitioner,
-  foundation,
-  azure,
-  deloitte,
 } from "../assets";
 
 export const navLinks = [
   {
     id: 'about',
     title: 'About',
+  },
+  {
+    id: 'projects',
+    title: 'Projects',
   },
   {
     id: 'work',
@@ -36,12 +36,12 @@ export const navLinks = [
 
 const services = [
   {
-    title: "CI/CD Pipelines",
-    icon: backend,
+    title: "Freelance Web Developer",
+    icon: frontend,
   },
   {
-    title: "Automation",
-    icon: frontend,
+    title: "CI/CD Pipelines",
+    icon: backend,
   },
   {
     title: "Cloud & Monitoring",
@@ -82,11 +82,24 @@ const technologies = [
 
 const experiences = [
   {
+    title: 'Freelance Web Developer',
+    company_name: 'Self-Employed',
+    icon: frontend,
+    iconBg: '#1a1a2e',
+    date: 'March 2026 – Present',
+    points: [
+      'Design and develop professional websites for businesses and entrepreneurs.',
+      'Built and manage jobsready.co.za — a job listing platform.',
+      'Provide end-to-end solutions: design, development, hosting, and maintenance.',
+      'Help clients establish a strong online presence to grow their business.',
+    ],
+  },
+  {
     title: 'DevOps Engineer Intern',
     company_name: 'Empire Partner Foundation',
     icon: coverhunt,
     iconBg: '#333333',
-    date: 'March 2025 – Present',
+    date: 'March 2025 – February 2026',
     points: [
       'Designed and maintained CI/CD pipelines using GitHub Actions and Docker.',
       'Monitored infrastructure and application health using AWS CloudWatch.',
@@ -130,40 +143,12 @@ const experiences = [
 
 const projects = [
   {
-    id: "project-1",
-    name: "AWS Academy Cloud Foundations",
+    id: 'project-1',
+    name: 'JobsReady',
     description:
-      "Completed AWS Academy Cloud Foundations, covering core AWS services, cloud concepts, security, and architecture.",
-    image: foundation,
-    repo: "#",
-    demo: "https://www.linkedin.com/in/tshivhandekano-onndwela",
-  },
-  {
-    id: "project-2",
-    name: "AWS Certified Cloud Practitioner",
-    description:
-      "Earned the AWS Certified Cloud Practitioner credential, validating foundational cloud knowledge and AWS services.",
-    image: practitioner,
-    repo: "#",
-    demo: "https://www.linkedin.com/in/tshivhandekano-onndwela",
-  },
-  {
-    id: "project-3",
-    name: "Azure Virtual Machine Deployment",
-    description:
-      "Hands-on experience creating virtual machines and deploying a web server on Microsoft Azure.",
-    image: azure,
-    repo: "#",
-    demo: "https://www.linkedin.com/in/tshivhandekano-onndwela",
-  },
-  {
-    id: "project-4",
-    name: "Deloitte Technology Consulting",
-    description:
-      "Completed Deloitte's Technology Consulting Virtual Internship, gaining exposure to real-world consulting and tech strategy.",
-    image: deloitte,
-    repo: "#",
-    demo: "https://www.linkedin.com/in/tshivhandekano-onndwela",
+      'A professional job listing platform connecting job seekers with employers across South Africa. Built, deployed, and actively managed by Tshivhandekano Onndwela.',
+    tags: ['Web Development', 'Job Platform', 'Full Stack'],
+    url: 'https://jobsready.co.za',
   },
 ];
 
