@@ -1,63 +1,32 @@
-# Portfolio Template
+# My Portfolio Website
 
-I created this portfolio to use as my own but ended up doing something else entirely. However, instead of keeping it buried, I decided to put it up here on GitHub as an open-source resource to help individuals to learn, adapt, and create their own portfolios. Feel free to customize and modify the theme and components to suit your personal style and branding preferences.
+This portfolio showcases my work, projects, and skills in web development and technology. I built this project as a way to present my experience, highlight what I’ve worked on, and create a space where people can learn more about me and my work.
 
-## License and Attribution
+The website is designed with a modern and interactive interface, and I may continue updating and improving it over time by adding new features and projects.
 
 ## Built With
 
 - React.js
-- TailwindCSS
+- Tailwind CSS
 - Three.js
 - Framer Motion
 
-## Live Demo
-
-- Click [here](/) to view the live demo.
-
 ## Getting Started
 
-To get started with this portfolio template, follow these simple steps:
+To run this project locally, follow these steps:
 
 ### Prerequisites
 
-Make sure you have node `16.0.0` or higher and npm `9.0.0` or higher installed.
+Make sure you have:
 
+- Node.js `16.0.0` or higher
+- npm `9.0.0` or higher
 
-# Usage
+## Installation
 
-- Run the following command to start a local server:
+Install dependencies:
 
-```
-npm run dev
-```
-
-This will open up the project on a browser on `http://localhost:5173/`
-
-## Build
-
-- To create a production build:
-
-```
-npm run build
-```
-
-- To preview the site as it will appear once deployed:
-
-```
-npm run preview
-```
-
-## Authors
-
-👤 **Rupinder Singh**
-
-## Feedback and Contributions
-
-If you have any feedback, suggestions, or would like to contribute to this project, your involvement is highly valued. Feel free to open an [issue](../../issues/) or submit a pull request with your ideas and enhancements. Remember, this template is a starting point, and the true magic lies in making it your own. Enjoy the journey of creating a stunning portfolio that represents your unique talents and accomplishments!
-
-Happy coding and showcasing!
-
-## Show your support
+```bash
+npm install
 
 Give a ⭐️ if you like this project!
